@@ -14,7 +14,7 @@
 
     <title>
         
-        mac_tips - 子非鱼
+        子非鱼
         
     </title>
 
@@ -66,7 +66,7 @@
                     <span>主页</span>
                 </a>
             </li>
-            <li >
+            <li  class=active >
                 <a href="/tags">
                     <i class="iconfont icon-biaoqian1"></i>
                     <span>标签</span>
@@ -101,10 +101,6 @@
         </ul>
     </div>
     
-        <div id="toc" class="toc-article">
-    
-</div>
-    
 </div>
 
 
@@ -132,45 +128,80 @@
         
 
 
-<div class="post-container">
-    <div class="post-title">
-        mac_tips
-    </div>
+<!-- 归档列表 -->
 
-    <div class="post-meta">
-        <span class="attr">发布于：<span>2022-07-11 13:43:03</span></span>
-        
-        <span class="attr">标签：/
-        
-        <a class="tag" href="/tags/#MacOS" title="MacOS">MacOS</a>
-        <span>/</span>
-        
-        
-        </span>
-        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
-</span>
-</span>
-    </div>
-    <div class="post-content no-indent">
-        <blockquote>
-<p>MacOS 的一些小技巧</p>
-</blockquote>
-<ol>
-<li><p>homebrew 安装的 Clash for Windows 提示文件已损坏</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo xattr -r -d com.apple.quarantine /Applications/Clash\ for\ Windows.app</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装 Parallels Desktop 卸载后发现 Finder 边栏中英文混杂，下载变成 Downloads</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">默认终端</span></span><br><span class="line">cd Downloads</span><br><span class="line">touch .localized</span><br></pre></td></tr></table></figure></li>
-</ol>
+<div class="archives-container">
 
+<div class="one-tag-list">
+                <span class="fa fa-calendar-times-o listing-seperator" id="2022">
+                    <span class="tag-text">2022</span>
+                </span>
+    <ul>
         
-        <br />
-        <div id="comment-container">
-        </div>
-        <div id="disqus_thread"></div>
-        <div id="lv-container"></div>
-        <div class="giscus"></div>
-    </div>
+        <!-- <li class="listing-item">
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li> -->
+        <li >
+            <span>07-11</span>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2022/07/11/mac-tips/">
+                        <span>
+                            mac_tips
+                        </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </li>
+        
+        <!-- <li class="listing-item">
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li> -->
+        <li >
+            <span>06-23</span>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2022/06/23/2/">
+                        <span>
+                            2
+                        </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </li>
+        
+        <!-- <li class="listing-item">
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li> -->
+        <li >
+            <span>06-23</span>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2022/06/23/hi/">
+                        <span>
+                            hi
+                        </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </li>
+        
+        <!-- <li class="listing-item">
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li> -->
+        <li >
+            <span>06-22</span>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2022/06/22/1/">
+                        <span>
+                            1
+                        </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </li>
+        
+
+    </ul>
+</div>
+
 </div>
 
     </div>
@@ -211,7 +242,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = true
+    window.isPost = false
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 
@@ -220,22 +251,6 @@
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
-
-
-    <script src="https://giscus.app/client.js"
-    data-repo="hondungsan/hondungsan.github.io"
-    data-repo-id="R_kgDOHizOKw"
-    data-category="Announcements"
-    data-category-id="DIC_kwDOHizOK84CP0Y0"
-    data-mapping="pathname"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="light"
-    data-lang="zh-CN"
-    crossorigin="anonymous"
-    async>
-</script>
 
 
 
